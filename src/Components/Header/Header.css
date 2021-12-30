@@ -1,0 +1,17 @@
+.Navlink{
+    text-decoration: none !important;
+    color: azure !important;
+    font-size: 20px !important;
+    margin-top: -15px !important;
+    margin-left: 15px !important;
+    
+    
+}
+
+.Navlink:hover{
+    color:aqua !important;
+}
+
+.Brand{
+    margin-left: 20px !important;
+}
