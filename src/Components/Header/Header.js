@@ -20,6 +20,9 @@ export default function Header() {
                             <NavItem>
                                 <NavLink exact to='/order' className='Navlink'>Order</NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink exact to='/login' className='Navlink'>Login</NavLink>
+                            </NavItem>
                             
                         </Nav>
                            

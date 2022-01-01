@@ -5,6 +5,7 @@ import { Route} from 'react-router-dom'
 import Order from './Order/Order'
 import ComponentcheckOut from './Order/checkout/ComponentcheckOut'
 import Header from './Header/Header'
+import Auth from './Auth/Auth'
 
 
 
@@ -19,6 +20,7 @@ export default function Main() {
                         <Route path='/' exact component={BurgerBuilder }/>
                         <Route path="/order" component={Order}/>
                         <Route path='/checkOut' component={ComponentcheckOut}/>
+                        <Route path='/login' component={Auth}/>
                        
                     </div> 
           </div>

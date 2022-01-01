@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function OrderSolo(props) {
+ const orderSolo=(props)=> {
+    
    const ingridentSum=props.order.ingridents.map(item=>{
        return(
            <span style={{
@@ -30,3 +31,4 @@ export default function OrderSolo(props) {
         </div>
     )
 }
+export default orderSolo;

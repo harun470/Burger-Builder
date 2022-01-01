@@ -86,6 +86,7 @@ export const reducer=(state=INITIAL_STATE,action)=>{
                     ...state,
                     orders:orders,
                     orderLoading:false
+                    
                   
                 }
             case actionTypes.ORDER_LOAD_FAILED:

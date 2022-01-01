@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchOrder } from '../../redux/actionCreators'
-import OrderSolo from './OrderSolo/OrderSolo'
+import OrderSolo from './orderSolo/orderSolo'
 import OrderSpinner from '../spinner/Comspinner'
 
 
@@ -23,9 +23,11 @@ const mapDispatchToProps=(dispatch)=>{
  class Order extends Component {
      componentDidMount(){
          this.props.fetchOrder()
+         console.log(this.props)
      }
      
      
+
     render() {
         let ordersDetail=null
         if(this.props.orderErr){
@@ -46,9 +48,11 @@ const mapDispatchToProps=(dispatch)=>{
                     marginTop:'25px'
                     }}>you have no order</p>
             }else{
-                ordersDetail=this.props.orders.map(order=>{
+                ordersDetail=this.props.orders.map((order)=>{
+                    console.log(order)
                     return <OrderSolo order={order} key={order.id} />
-                })
+                }
+                )
             }
             
         }
@@ -68,5 +72,5 @@ const mapDispatchToProps=(dispatch)=>{
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Order)
+export default connect(mapStateToProps,mapDispatchToProps)(Order);
 

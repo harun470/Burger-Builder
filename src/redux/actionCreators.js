@@ -44,6 +44,7 @@ export const fetchOrder=()=>dispatch=>{
     axios.get("https://burger-builder-39003-default-rtdb.asia-southeast1.firebasedatabase.app/order.json")
     .then(response=>{
         dispatch (loadOrder(response.data))
+        
     })
     .catch(err=>{
         dispatch(orderLoadFailed())
