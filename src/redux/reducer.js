@@ -18,7 +18,10 @@ const INITIAL_STATE={
     purchageable:false,
     orders:[],
     orderLoading:true,
-    orderErr:false
+    orderErr:false,
+    token:null,
+    userId:null,
+    authLoading:false,
 }
 
 export const reducer=(state=INITIAL_STATE,action)=>{
@@ -94,6 +97,23 @@ export const reducer=(state=INITIAL_STATE,action)=>{
                     ...state,
                     orderErr:true,
                     orderLoading:false
+                }
+            case actionTypes.AUTH_SUCCESS:
+                return{
+                    ...state,
+                    token:action.payload.token,
+                    userId:action.payload.userId
+                }
+            case actionTypes.AUTH_LOGOUT:
+                return{
+                    ...state,
+                    token:null,
+                    userId:null
+                }
+            case actionTypes.AUTH_LOADING:
+                return{
+                    ...state,
+                    authLoading:action.payload
                 }
         default:
             return state;
